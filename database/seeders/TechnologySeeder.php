@@ -21,9 +21,9 @@ class TechnologySeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         for ($i=0; $i < 20 ; $i++) { 
-            $post = new Technology();
-            $post->name = $faker->word(1);
-            $post->save();
+            $technology = new Technology();
+            $technology->name = $faker->word(1);
+            $technology->save();
         }
     }
 }

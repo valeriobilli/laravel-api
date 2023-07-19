@@ -85,6 +85,7 @@ class PostController extends Controller
     public function update(UpdatePostRequest $request, Post $post)
     {
         $data = $request->validated();
+        $types = Type::all();
 
         $post->title = $data['title'];
         $post->content = $data['content'];
